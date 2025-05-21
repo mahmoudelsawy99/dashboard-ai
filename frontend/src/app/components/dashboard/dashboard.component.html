@@ -1,0 +1,183 @@
+<div class="dashboard-container">
+  <ng-container *ngIf="loading; else loaded">
+    <div class="loading">Loading insights...</div>
+  </ng-container>
+  <ng-template #loaded>
+    <ng-container *ngIf="error; else dashboard">
+      <div class="error">{{ error }}</div>
+    </ng-container>
+    <ng-template #dashboard>
+      <!-- Summary Cards -->
+      <div class="summary-cards">
+        <!-- AI Sales Forecast -->
+        <mat-card class="summary-card ai-card">
+          <mat-card-content>
+            <div class="card-header">
+              <mat-icon color="primary">auto_graph</mat-icon>
+              <span>AI Sales Forecast</span>
+            </div>
+            <div class="card-value">{{ prediction?.prediction | number:'1.0-0' }}</div>
+            <div class="prediction-details">
+              <div class="confidence">
+                Confidence: {{ (prediction?.confidence || 0) * 100 | number:'1.0-0' }}%
+              </div>
+              <div class="trend" [class.positive]="prediction?.trend === 'increasing'">
+                <mat-icon>{{ prediction?.trend === 'increasing' ? 'arrow_upward' : 'arrow_downward' }}</mat-icon>
+                {{ prediction?.trend === 'increasing' ? 'Upward' : 'Downward' }} Trend
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <!-- AI Demand Prediction -->
+        <mat-card class="summary-card ai-card">
+          <mat-card-content>
+            <div class="card-header">
+              <mat-icon color="primary">psychology</mat-icon>
+              <span>AI Demand Prediction</span>
+            </div>
+            <div class="card-value">{{ (productPredictions && productPredictions[0]?.predictions?.['Monday'] ?? 0) | number:'1.0-0' }}</div>
+            <div class="prediction-details">
+              <div class="confidence">
+                Model Confidence: {{ (averageConfidence * 100) | number:'1.0-0' }}%
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <!-- Anomaly Detection -->
+        <mat-card class="summary-card anomaly-card">
+          <mat-card-content>
+            <div class="card-header">
+              <mat-icon color="warn">warning</mat-icon>
+              <span>Anomaly Detection</span>
+            </div>
+            <div class="card-value">{{ anomalies.length }}</div>
+            <div class="anomaly-summary">
+              <div class="severity-counts">
+                <span class="high">{{ getSeverityCount('high') }} High</span>
+                <span class="medium">{{ getSeverityCount('medium') }} Medium</span>
+                <span class="low">{{ getSeverityCount('low') }} Low</span>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <!-- Product Recommendations -->
+        <mat-card class="summary-card ai-card">
+          <mat-card-content>
+            <div class="card-header">
+              <mat-icon color="primary">recommend</mat-icon>
+              <span>Product Recommendations</span>
+            </div>
+            <div class="card-value">{{ recommendations[0]?.productName || 'N/A' }}</div>
+            <div class="card-subtitle">Top Recommendation</div>
+          </mat-card-content>
+        </mat-card>
+        <!-- Trend Analysis -->
+        <mat-card class="summary-card trend-card">
+          <mat-card-content>
+            <div class="card-header">
+              <mat-icon color="primary">show_chart</mat-icon>
+              <span>Trend Analysis</span>
+            </div>
+            <div class="trend-summary">
+              <div class="trend-stats">
+                <div class="trend-item" *ngFor="let trend of topTrends">
+                  <span class="product-name">{{ trend?.productName || 'N/A' }}</span>
+                  <span class="trend-indicator" [class]="trend.trend">
+                    {{ trend.trend === 'up' ? '↑' : trend.trend === 'down' ? '↓' : '→' }}
+                    {{ trend.growthRate | number:'1.0-0' }}%
+                  </span>
+                </div>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <!-- Inventory Status -->
+        <mat-card class="summary-card">
+          <mat-card-content>
+            <div class="card-header">
+              <mat-icon color="primary">inventory_2</mat-icon>
+              <span>Inventory Status</span>
+            </div>
+            <div class="card-value">{{ insights?.totalProducts }}</div>
+            <div class="card-subtitle">Active Products</div>
+            <div class="card-value">Low Stock: {{ insights?.lowStock?.length }}</div>
+          </mat-card-content>
+        </mat-card>
+        <!-- Sales Insights -->
+        <mat-card class="summary-card">
+          <mat-card-content>
+            <div class="card-header">
+              <mat-icon color="primary">insights</mat-icon>
+              <span>Sales Insights</span>
+            </div>
+            <div class="card-value">{{ monthOverMonth.percentageChange > 0 ? '+' : '' }}{{ monthOverMonth.percentageChange }}%</div>
+            <div class="card-subtitle">vs last month</div>
+            <div class="card-value">Next Month Prediction: {{ prediction?.prediction || 0 }}</div>
+          </mat-card-content>
+        </mat-card>
+        <!-- Product Expected to Buy Next Month -->
+        <mat-card class="summary-card">
+          <mat-card-content>
+            <div class="card-header">
+              <mat-icon color="primary">star</mat-icon>
+              <span>Expected Top Seller Next Month</span>
+            </div>
+            <div class="card-value">{{ (productPredictions && productPredictions[0]?.product) || 'N/A' }}</div>
+          </mat-card-content>
+        </mat-card>
+        <!-- Products Not Sold -->
+        <mat-card class="summary-card">
+          <mat-card-content>
+            <div class="card-header">
+              <mat-icon color="primary">block</mat-icon>
+              <span>Products Not Sold</span>
+            </div>
+            <div class="card-value">{{ (insights?.notSold || []).length }}</div>
+            <div class="card-subtitle">{{ (insights?.notSold || []).join(', ') || 'No data' }}</div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <!-- Simple Sales Trend Chart (placeholder) -->
+      <div class="chart-section">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Sales Trend (Last 6 Months)</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <app-sales-chart
+              [salesData]="insights?.salesTrend?.monthly || []"
+              [labels]="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']">
+            </app-sales-chart>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <!-- Main Content Tabs -->
+      <mat-tab-group class="dashboard-tabs">
+        <!-- ... other tabs ... -->
+        <mat-tab label="Product Recommendations">
+          <div class="tab-content">
+            <div class="recommendations-grid">
+              <mat-card class="recommendation-card" *ngFor="let rec of recommendations">
+                <mat-card-header>
+                  <mat-card-title>{{ rec?.productName || 'N/A' }}</mat-card-title>
+                  <mat-card-subtitle>{{ rec.category }}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                  <div class="recommendation-details">
+                    <div class="price">${{ rec.price }}</div>
+                    <div class="score">Score: {{ rec.score | number:'1.0-0' }}%</div>
+                    <div class="reason">{{ rec.reason }}</div>
+                    <div class="similar-products">
+                      <span class="label">Similar to:</span>
+                      <span class="products">{{ rec.similarProducts.join(', ') }}</span>
+                    </div>
+                  </div>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </ng-template>
+  </ng-template>
+</div>

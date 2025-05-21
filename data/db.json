@@ -1,0 +1,9 @@
+{
+  "products": [
+    { "id": 1, "name": "Product A", "price": 100, "rating": 4.5, "sales": 50, "category": "Electronics", "lastMonthSales": 20 },
+    { "id": 2, "name": "Product B", "price": 200, "rating": 4.0, "sales": 30, "category": "Electronics", "lastMonthSales": 15 },
+    { "id": 3, "name": "Product C", "price": 150, "rating": 3.5, "sales": 20, "category": "Clothing", "lastMonthSales": 10 },
+    { "id": 4, "name": "Product D", "price": 300, "rating": 5.0, "sales": 40, "category": "Clothing", "lastMonthSales": 25 },
+    { "id": 5, "name": "Product E", "price": 250, "rating": 4.2, "sales": 35, "category": "Electronics", "lastMonthSales": 18 }
+  ]
+} 

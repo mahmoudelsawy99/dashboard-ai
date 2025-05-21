@@ -1,0 +1,1020 @@
+{
+  "sales": [
+    {
+      "date": "2025-04-01",
+      "total": 4990
+    },
+    {
+      "date": "2025-04-02",
+      "total": 1106
+    },
+    {
+      "date": "2025-04-03",
+      "total": 4215
+    },
+    {
+      "date": "2025-04-04",
+      "total": 2414
+    },
+    {
+      "date": "2025-04-05",
+      "total": 3681
+    },
+    {
+      "date": "2025-04-06",
+      "total": 1360
+    },
+    {
+      "date": "2025-04-07",
+      "total": 2457
+    },
+    {
+      "date": "2025-04-08",
+      "total": 4056
+    },
+    {
+      "date": "2025-04-09",
+      "total": 1202
+    },
+    {
+      "date": "2025-04-10",
+      "total": 3265
+    },
+    {
+      "date": "2025-04-11",
+      "total": 2593
+    },
+    {
+      "date": "2025-04-12",
+      "total": 2453
+    },
+    {
+      "date": "2025-04-13",
+      "total": 4623
+    },
+    {
+      "date": "2025-04-14",
+      "total": 4885
+    },
+    {
+      "date": "2025-04-15",
+      "total": 2320
+    },
+    {
+      "date": "2025-04-16",
+      "total": 4553
+    },
+    {
+      "date": "2025-04-17",
+      "total": 1009
+    },
+    {
+      "date": "2025-04-18",
+      "total": 4363
+    },
+    {
+      "date": "2025-04-19",
+      "total": 3914
+    },
+    {
+      "date": "2025-04-20",
+      "total": 1372
+    },
+    {
+      "date": "2025-04-21",
+      "total": 3581
+    },
+    {
+      "date": "2025-04-22",
+      "total": 1317
+    },
+    {
+      "date": "2025-04-23",
+      "total": 4359
+    },
+    {
+      "date": "2025-04-24",
+      "total": 3692
+    },
+    {
+      "date": "2025-04-25",
+      "total": 2164
+    },
+    {
+      "date": "2025-04-26",
+      "total": 3177
+    },
+    {
+      "date": "2025-04-27",
+      "total": 2832
+    },
+    {
+      "date": "2025-04-28",
+      "total": 4776
+    },
+    {
+      "date": "2025-04-29",
+      "total": 3064
+    },
+    {
+      "date": "2025-04-30",
+      "total": 1781
+    },
+    {
+      "date": "2025-05-01",
+      "total": 3242
+    },
+    {
+      "date": "2025-05-02",
+      "total": 1071
+    },
+    {
+      "date": "2025-05-03",
+      "total": 1548
+    },
+    {
+      "date": "2025-05-04",
+      "total": 2320
+    },
+    {
+      "date": "2025-05-05",
+      "total": 4373
+    },
+    {
+      "date": "2025-05-06",
+      "total": 3454
+    },
+    {
+      "date": "2025-05-07",
+      "total": 1676
+    },
+    {
+      "date": "2025-05-08",
+      "total": 3681
+    },
+    {
+      "date": "2025-05-09",
+      "total": 4997
+    },
+    {
+      "date": "2025-05-10",
+      "total": 4024
+    },
+    {
+      "date": "2025-05-11",
+      "total": 3813
+    },
+    {
+      "date": "2025-05-12",
+      "total": 2723
+    },
+    {
+      "date": "2025-05-13",
+      "total": 3856
+    },
+    {
+      "date": "2025-05-14",
+      "total": 4569
+    },
+    {
+      "date": "2025-05-15",
+      "total": 1363
+    },
+    {
+      "date": "2025-05-16",
+      "total": 2666
+    },
+    {
+      "date": "2025-05-17",
+      "total": 2334
+    },
+    {
+      "date": "2025-05-18",
+      "total": 2361
+    },
+    {
+      "date": "2025-05-19",
+      "total": 3813
+    },
+    {
+      "date": "2025-05-20",
+      "total": 3437
+    }
+  ],
+  "products": [
+    {
+      "id": "p001",
+      "name": "Product 1",
+      "category": "Clothing",
+      "price": 25.22,
+      "inventory": 43,
+      "monthly_sales": 294,
+      "views": 696,
+      "conversion_rate": 2.74,
+      "average_rating": 4.9
+    },
+    {
+      "id": "p002",
+      "name": "Product 2",
+      "category": "Accessories",
+      "price": 138.0,
+      "inventory": 8,
+      "monthly_sales": 297,
+      "views": 903,
+      "conversion_rate": 1.08,
+      "average_rating": 4.6
+    },
+    {
+      "id": "p003",
+      "name": "Product 3",
+      "category": "Accessories",
+      "price": 96.55,
+      "inventory": 40,
+      "monthly_sales": 280,
+      "views": 874,
+      "conversion_rate": 2.82,
+      "average_rating": 4.1
+    },
+    {
+      "id": "p004",
+      "name": "Product 4",
+      "category": "Home",
+      "price": 87.89,
+      "inventory": 44,
+      "monthly_sales": 231,
+      "views": 302,
+      "conversion_rate": 5.4,
+      "average_rating": 3.3
+    },
+    {
+      "id": "p005",
+      "name": "Product 5",
+      "category": "Books",
+      "price": 77.74,
+      "inventory": 4,
+      "monthly_sales": 133,
+      "views": 356,
+      "conversion_rate": 6.97,
+      "average_rating": 3.2
+    },
+    {
+      "id": "p006",
+      "name": "Product 6",
+      "category": "Accessories",
+      "price": 107.98,
+      "inventory": 44,
+      "monthly_sales": 194,
+      "views": 591,
+      "conversion_rate": 6.08,
+      "average_rating": 3.5
+    },
+    {
+      "id": "p007",
+      "name": "Product 7",
+      "category": "Clothing",
+      "price": 135.87,
+      "inventory": 6,
+      "monthly_sales": 253,
+      "views": 143,
+      "conversion_rate": 2.27,
+      "average_rating": 4.1
+    },
+    {
+      "id": "p008",
+      "name": "Product 8",
+      "category": "Books",
+      "price": 178.57,
+      "inventory": 5,
+      "monthly_sales": 198,
+      "views": 977,
+      "conversion_rate": 4.88,
+      "average_rating": 3.8
+    },
+    {
+      "id": "p009",
+      "name": "Product 9",
+      "category": "Electronics",
+      "price": 148.5,
+      "inventory": 37,
+      "monthly_sales": 172,
+      "views": 396,
+      "conversion_rate": 5.71,
+      "average_rating": 3.5
+    },
+    {
+      "id": "p010",
+      "name": "Product 10",
+      "category": "Electronics",
+      "price": 101.32,
+      "inventory": 36,
+      "monthly_sales": 114,
+      "views": 965,
+      "conversion_rate": 8.1,
+      "average_rating": 4.5
+    },
+    {
+      "id": "p011",
+      "name": "Product 11",
+      "category": "Accessories",
+      "price": 92.59,
+      "inventory": 50,
+      "monthly_sales": 100,
+      "views": 162,
+      "conversion_rate": 5.25,
+      "average_rating": 4.0
+    },
+    {
+      "id": "p012",
+      "name": "Product 12",
+      "category": "Clothing",
+      "price": 75.64,
+      "inventory": 46,
+      "monthly_sales": 50,
+      "views": 749,
+      "conversion_rate": 8.78,
+      "average_rating": 4.0
+    },
+    {
+      "id": "p013",
+      "name": "Product 13",
+      "category": "Books",
+      "price": 161.61,
+      "inventory": 32,
+      "monthly_sales": 41,
+      "views": 479,
+      "conversion_rate": 1.45,
+      "average_rating": 3.0
+    },
+    {
+      "id": "p014",
+      "name": "Product 14",
+      "category": "Clothing",
+      "price": 156.2,
+      "inventory": 35,
+      "monthly_sales": 127,
+      "views": 446,
+      "conversion_rate": 5.31,
+      "average_rating": 3.9
+    },
+    {
+      "id": "p015",
+      "name": "Product 15",
+      "category": "Electronics",
+      "price": 99.52,
+      "inventory": 17,
+      "monthly_sales": 237,
+      "views": 219,
+      "conversion_rate": 1.04,
+      "average_rating": 3.6
+    },
+    {
+      "id": "p016",
+      "name": "Product 16",
+      "category": "Home",
+      "price": 157.86,
+      "inventory": 8,
+      "monthly_sales": 150,
+      "views": 213,
+      "conversion_rate": 3.97,
+      "average_rating": 3.4
+    },
+    {
+      "id": "p017",
+      "name": "Product 17",
+      "category": "Home",
+      "price": 189.48,
+      "inventory": 15,
+      "monthly_sales": 258,
+      "views": 337,
+      "conversion_rate": 7.53,
+      "average_rating": 4.2
+    },
+    {
+      "id": "p018",
+      "name": "Product 18",
+      "category": "Electronics",
+      "price": 33.72,
+      "inventory": 44,
+      "monthly_sales": 131,
+      "views": 266,
+      "conversion_rate": 7.55,
+      "average_rating": 4.0
+    },
+    {
+      "id": "p019",
+      "name": "Product 19",
+      "category": "Electronics",
+      "price": 104.14,
+      "inventory": 39,
+      "monthly_sales": 149,
+      "views": 128,
+      "conversion_rate": 2.99,
+      "average_rating": 3.8
+    },
+    {
+      "id": "p020",
+      "name": "Product 20",
+      "category": "Books",
+      "price": 111.82,
+      "inventory": 16,
+      "monthly_sales": 78,
+      "views": 590,
+      "conversion_rate": 5.66,
+      "average_rating": 4.3
+    },
+    {
+      "id": "p021",
+      "name": "Product 21",
+      "category": "Clothing",
+      "price": 154.64,
+      "inventory": 4,
+      "monthly_sales": 155,
+      "views": 488,
+      "conversion_rate": 5.88,
+      "average_rating": 4.0
+    },
+    {
+      "id": "p022",
+      "name": "Product 22",
+      "category": "Home",
+      "price": 70.11,
+      "inventory": 8,
+      "monthly_sales": 122,
+      "views": 996,
+      "conversion_rate": 4.8,
+      "average_rating": 4.3
+    },
+    {
+      "id": "p023",
+      "name": "Product 23",
+      "category": "Electronics",
+      "price": 19.52,
+      "inventory": 43,
+      "monthly_sales": 200,
+      "views": 437,
+      "conversion_rate": 8.06,
+      "average_rating": 3.6
+    },
+    {
+      "id": "p024",
+      "name": "Product 24",
+      "category": "Books",
+      "price": 97.1,
+      "inventory": 33,
+      "monthly_sales": 18,
+      "views": 178,
+      "conversion_rate": 1.8,
+      "average_rating": 3.1
+    },
+    {
+      "id": "p025",
+      "name": "Product 25",
+      "category": "Home",
+      "price": 35.31,
+      "inventory": 39,
+      "monthly_sales": 85,
+      "views": 694,
+      "conversion_rate": 8.15,
+      "average_rating": 4.2
+    },
+    {
+      "id": "p026",
+      "name": "Product 26",
+      "category": "Books",
+      "price": 27.8,
+      "inventory": 41,
+      "monthly_sales": 113,
+      "views": 758,
+      "conversion_rate": 8.81,
+      "average_rating": 3.6
+    },
+    {
+      "id": "p027",
+      "name": "Product 27",
+      "category": "Electronics",
+      "price": 48.7,
+      "inventory": 35,
+      "monthly_sales": 153,
+      "views": 712,
+      "conversion_rate": 8.59,
+      "average_rating": 4.7
+    },
+    {
+      "id": "p028",
+      "name": "Product 28",
+      "category": "Electronics",
+      "price": 97.3,
+      "inventory": 16,
+      "monthly_sales": 249,
+      "views": 734,
+      "conversion_rate": 5.03,
+      "average_rating": 3.6
+    },
+    {
+      "id": "p029",
+      "name": "Product 29",
+      "category": "Electronics",
+      "price": 48.92,
+      "inventory": 33,
+      "monthly_sales": 284,
+      "views": 810,
+      "conversion_rate": 8.45,
+      "average_rating": 5.0
+    },
+    {
+      "id": "p030",
+      "name": "Product 30",
+      "category": "Electronics",
+      "price": 142.03,
+      "inventory": 32,
+      "monthly_sales": 238,
+      "views": 540,
+      "conversion_rate": 1.22,
+      "average_rating": 3.7
+    },
+    {
+      "id": "p031",
+      "name": "Product 31",
+      "category": "Clothing",
+      "price": 37.27,
+      "inventory": 12,
+      "monthly_sales": 268,
+      "views": 708,
+      "conversion_rate": 1.47,
+      "average_rating": 4.9
+    },
+    {
+      "id": "p032",
+      "name": "Product 32",
+      "category": "Clothing",
+      "price": 49.34,
+      "inventory": 33,
+      "monthly_sales": 165,
+      "views": 324,
+      "conversion_rate": 5.5,
+      "average_rating": 4.3
+    },
+    {
+      "id": "p033",
+      "name": "Product 33",
+      "category": "Books",
+      "price": 179.75,
+      "inventory": 20,
+      "monthly_sales": 196,
+      "views": 756,
+      "conversion_rate": 1.33,
+      "average_rating": 3.1
+    },
+    {
+      "id": "p034",
+      "name": "Product 34",
+      "category": "Home",
+      "price": 163.38,
+      "inventory": 41,
+      "monthly_sales": 68,
+      "views": 378,
+      "conversion_rate": 8.07,
+      "average_rating": 4.2
+    },
+    {
+      "id": "p035",
+      "name": "Product 35",
+      "category": "Books",
+      "price": 19.58,
+      "inventory": 12,
+      "monthly_sales": 178,
+      "views": 580,
+      "conversion_rate": 3.42,
+      "average_rating": 4.0
+    },
+    {
+      "id": "p036",
+      "name": "Product 36",
+      "category": "Accessories",
+      "price": 78.52,
+      "inventory": 36,
+      "monthly_sales": 12,
+      "views": 904,
+      "conversion_rate": 8.14,
+      "average_rating": 3.4
+    },
+    {
+      "id": "p037",
+      "name": "Product 37",
+      "category": "Electronics",
+      "price": 196.42,
+      "inventory": 38,
+      "monthly_sales": 234,
+      "views": 877,
+      "conversion_rate": 9.35,
+      "average_rating": 3.1
+    },
+    {
+      "id": "p038",
+      "name": "Product 38",
+      "category": "Clothing",
+      "price": 116.65,
+      "inventory": 22,
+      "monthly_sales": 94,
+      "views": 428,
+      "conversion_rate": 8.51,
+      "average_rating": 4.2
+    },
+    {
+      "id": "p039",
+      "name": "Product 39",
+      "category": "Books",
+      "price": 139.67,
+      "inventory": 7,
+      "monthly_sales": 194,
+      "views": 784,
+      "conversion_rate": 5.53,
+      "average_rating": 3.2
+    },
+    {
+      "id": "p040",
+      "name": "Product 40",
+      "category": "Home",
+      "price": 170.45,
+      "inventory": 0,
+      "monthly_sales": 265,
+      "views": 142,
+      "conversion_rate": 1.58,
+      "average_rating": 4.7
+    },
+    {
+      "id": "p041",
+      "name": "Product 41",
+      "category": "Accessories",
+      "price": 26.8,
+      "inventory": 26,
+      "monthly_sales": 253,
+      "views": 506,
+      "conversion_rate": 8.26,
+      "average_rating": 3.4
+    },
+    {
+      "id": "p042",
+      "name": "Product 42",
+      "category": "Clothing",
+      "price": 67.35,
+      "inventory": 0,
+      "monthly_sales": 56,
+      "views": 169,
+      "conversion_rate": 7.16,
+      "average_rating": 3.1
+    },
+    {
+      "id": "p043",
+      "name": "Product 43",
+      "category": "Clothing",
+      "price": 30.75,
+      "inventory": 8,
+      "monthly_sales": 274,
+      "views": 637,
+      "conversion_rate": 5.44,
+      "average_rating": 3.9
+    },
+    {
+      "id": "p044",
+      "name": "Product 44",
+      "category": "Home",
+      "price": 159.34,
+      "inventory": 40,
+      "monthly_sales": 100,
+      "views": 1000,
+      "conversion_rate": 3.48,
+      "average_rating": 4.2
+    },
+    {
+      "id": "p045",
+      "name": "Product 45",
+      "category": "Home",
+      "price": 45.53,
+      "inventory": 21,
+      "monthly_sales": 95,
+      "views": 622,
+      "conversion_rate": 1.3,
+      "average_rating": 3.4
+    },
+    {
+      "id": "p046",
+      "name": "Product 46",
+      "category": "Clothing",
+      "price": 16.3,
+      "inventory": 22,
+      "monthly_sales": 261,
+      "views": 284,
+      "conversion_rate": 7.33,
+      "average_rating": 4.8
+    },
+    {
+      "id": "p047",
+      "name": "Product 47",
+      "category": "Clothing",
+      "price": 41.16,
+      "inventory": 7,
+      "monthly_sales": 249,
+      "views": 536,
+      "conversion_rate": 4.43,
+      "average_rating": 4.7
+    },
+    {
+      "id": "p048",
+      "name": "Product 48",
+      "category": "Home",
+      "price": 196.71,
+      "inventory": 2,
+      "monthly_sales": 44,
+      "views": 569,
+      "conversion_rate": 6.46,
+      "average_rating": 3.2
+    },
+    {
+      "id": "p049",
+      "name": "Product 49",
+      "category": "Clothing",
+      "price": 56.88,
+      "inventory": 37,
+      "monthly_sales": 42,
+      "views": 898,
+      "conversion_rate": 8.48,
+      "average_rating": 3.3
+    },
+    {
+      "id": "p050",
+      "name": "Product 50",
+      "category": "Home",
+      "price": 51.75,
+      "inventory": 32,
+      "monthly_sales": 90,
+      "views": 666,
+      "conversion_rate": 7.33,
+      "average_rating": 3.1
+    }
+  ],
+  "inventory_summary": {
+    "low_stock_threshold": 5,
+    "total_items": 1269,
+    "out_of_stock_items": 2,
+    "low_stock_items": [
+      "p005",
+      "p021",
+      "p040",
+      "p042",
+      "p048"
+    ]
+  },
+  "reviews": [
+    {
+      "product_id": "p011",
+      "rating": 5,
+      "review": "Could be better."
+    },
+    {
+      "product_id": "p036",
+      "rating": 5,
+      "review": "Very good quality."
+    },
+    {
+      "product_id": "p025",
+      "rating": 5,
+      "review": "Satisfied with the purchase."
+    },
+    {
+      "product_id": "p045",
+      "rating": 3,
+      "review": "Very good quality."
+    },
+    {
+      "product_id": "p035",
+      "rating": 4,
+      "review": "Very good quality."
+    },
+    {
+      "product_id": "p009",
+      "rating": 4,
+      "review": "Very good quality."
+    },
+    {
+      "product_id": "p012",
+      "rating": 3,
+      "review": "Satisfied with the purchase."
+    },
+    {
+      "product_id": "p013",
+      "rating": 4,
+      "review": "Very good quality."
+    },
+    {
+      "product_id": "p005",
+      "rating": 3,
+      "review": "Very good quality."
+    },
+    {
+      "product_id": "p049",
+      "rating": 4,
+      "review": "Could be better."
+    },
+    {
+      "product_id": "p042",
+      "rating": 4,
+      "review": "Could be better."
+    },
+    {
+      "product_id": "p044",
+      "rating": 5,
+      "review": "Highly recommended!"
+    },
+    {
+      "product_id": "p018",
+      "rating": 5,
+      "review": "Could be better."
+    },
+    {
+      "product_id": "p024",
+      "rating": 5,
+      "review": "Excellent product."
+    },
+    {
+      "product_id": "p027",
+      "rating": 4,
+      "review": "Highly recommended!"
+    },
+    {
+      "product_id": "p040",
+      "rating": 4,
+      "review": "Highly recommended!"
+    },
+    {
+      "product_id": "p043",
+      "rating": 5,
+      "review": "Excellent product."
+    },
+    {
+      "product_id": "p037",
+      "rating": 5,
+      "review": "Highly recommended!"
+    },
+    {
+      "product_id": "p018",
+      "rating": 5,
+      "review": "Satisfied with the purchase."
+    },
+    {
+      "product_id": "p019",
+      "rating": 4,
+      "review": "Could be better."
+    },
+    {
+      "product_id": "p022",
+      "rating": 5,
+      "review": "Very good quality."
+    },
+    {
+      "product_id": "p030",
+      "rating": 3,
+      "review": "Highly recommended!"
+    },
+    {
+      "product_id": "p049",
+      "rating": 5,
+      "review": "Excellent product."
+    },
+    {
+      "product_id": "p049",
+      "rating": 5,
+      "review": "Excellent product."
+    },
+    {
+      "product_id": "p028",
+      "rating": 4,
+      "review": "Excellent product."
+    },
+    {
+      "product_id": "p019",
+      "rating": 5,
+      "review": "Very good quality."
+    },
+    {
+      "product_id": "p040",
+      "rating": 3,
+      "review": "Very good quality."
+    },
+    {
+      "product_id": "p039",
+      "rating": 3,
+      "review": "Could be better."
+    },
+    {
+      "product_id": "p019",
+      "rating": 4,
+      "review": "Satisfied with the purchase."
+    },
+    {
+      "product_id": "p042",
+      "rating": 4,
+      "review": "Excellent product."
+    },
+    {
+      "product_id": "p047",
+      "rating": 4,
+      "review": "Excellent product."
+    },
+    {
+      "product_id": "p033",
+      "rating": 5,
+      "review": "Excellent product."
+    },
+    {
+      "product_id": "p031",
+      "rating": 4,
+      "review": "Could be better."
+    },
+    {
+      "product_id": "p047",
+      "rating": 3,
+      "review": "Could be better."
+    },
+    {
+      "product_id": "p005",
+      "rating": 3,
+      "review": "Satisfied with the purchase."
+    },
+    {
+      "product_id": "p012",
+      "rating": 3,
+      "review": "Satisfied with the purchase."
+    },
+    {
+      "product_id": "p050",
+      "rating": 3,
+      "review": "Excellent product."
+    },
+    {
+      "product_id": "p015",
+      "rating": 3,
+      "review": "Could be better."
+    },
+    {
+      "product_id": "p045",
+      "rating": 3,
+      "review": "Very good quality."
+    },
+    {
+      "product_id": "p006",
+      "rating": 3,
+      "review": "Highly recommended!"
+    },
+    {
+      "product_id": "p003",
+      "rating": 4,
+      "review": "Excellent product."
+    },
+    {
+      "product_id": "p026",
+      "rating": 4,
+      "review": "Very good quality."
+    },
+    {
+      "product_id": "p033",
+      "rating": 3,
+      "review": "Satisfied with the purchase."
+    },
+    {
+      "product_id": "p019",
+      "rating": 5,
+      "review": "Satisfied with the purchase."
+    },
+    {
+      "product_id": "p007",
+      "rating": 3,
+      "review": "Highly recommended!"
+    },
+    {
+      "product_id": "p009",
+      "rating": 4,
+      "review": "Very good quality."
+    },
+    {
+      "product_id": "p039",
+      "rating": 5,
+      "review": "Highly recommended!"
+    },
+    {
+      "product_id": "p048",
+      "rating": 5,
+      "review": "Satisfied with the purchase."
+    },
+    {
+      "product_id": "p015",
+      "rating": 4,
+      "review": "Excellent product."
+    },
+    {
+      "product_id": "p035",
+      "rating": 3,
+      "review": "Highly recommended!"
+    }
+  ]
+}
