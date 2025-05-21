@@ -111,6 +111,21 @@ export class DashboardComponent implements OnInit {
       this.trends = (this.trends || []).filter(t => t && t.productName);
       this.topTrends = (this.topTrends || []).filter(t => t && t.productName);
       // After setting this.recommendations, filter out incomplete objects
+
+      // Example: Add this where you call getSalesPrediction
+      const historicalData = [
+        { x: 1, y: 100 },
+        { x: 2, y: 120 },
+        { x: 3, y: 130 },
+        { x: 4, y: 140 },
+        { x: 5, y: 160 },
+        { x: 6, y: 180 }
+      ];
+      console.log('Sending historicalData to AI prediction:', historicalData);
+      this.insightsService.getSalesPrediction(historicalData).subscribe(prediction => {
+        console.log('AI prediction result:vvvvvvvv', prediction);
+        this.prediction = prediction;
+      });
     } catch (error) {
       console.error('Error loading dashboard data:', error);
       this.error = 'Failed to load dashboard data.';

@@ -13,16 +13,16 @@
         <mat-card class="summary-card ai-card">
           <mat-card-content>
             <div class="card-header">
-              <mat-icon color="primary">auto_graph</mat-icon>
+              <i class="fas fa-robot" style="margin-right:8px;"></i>
               <span>AI Sales Forecast</span>
             </div>
-            <div class="card-value">{{ prediction?.prediction | number:'1.0-0' }}</div>
+            <div class="card-value">{{ prediction?.prediction ?? 0 | number:'1.0-0' }}</div>
             <div class="prediction-details">
               <div class="confidence">
                 Confidence: {{ (prediction?.confidence || 0) * 100 | number:'1.0-0' }}%
               </div>
               <div class="trend" [class.positive]="prediction?.trend === 'increasing'">
-                <mat-icon>{{ prediction?.trend === 'increasing' ? 'arrow_upward' : 'arrow_downward' }}</mat-icon>
+                <i class="fas" [ngClass]="prediction?.trend === 'increasing' ? 'fa-arrow-up' : 'fa-arrow-down'" style="margin-right:4px;"></i>
                 {{ prediction?.trend === 'increasing' ? 'Upward' : 'Downward' }} Trend
               </div>
             </div>
@@ -32,10 +32,10 @@
         <mat-card class="summary-card ai-card">
           <mat-card-content>
             <div class="card-header">
-              <mat-icon color="primary">psychology</mat-icon>
+              <i class="fas fa-brain" style="margin-right:8px;"></i>
               <span>AI Demand Prediction</span>
             </div>
-            <div class="card-value">{{ (productPredictions && productPredictions[0]?.predictions?.['Monday'] ?? 0) | number:'1.0-0' }}</div>
+            <div class="card-value">{{ (productPredictions && productPredictions[0]?.predictions?.['Monday']) ?? 0 | number:'1.0-0' }}</div>
             <div class="prediction-details">
               <div class="confidence">
                 Model Confidence: {{ (averageConfidence * 100) | number:'1.0-0' }}%
@@ -47,10 +47,10 @@
         <mat-card class="summary-card anomaly-card">
           <mat-card-content>
             <div class="card-header">
-              <mat-icon color="warn">warning</mat-icon>
+              <i class="fas fa-exclamation-triangle" style="margin-right:8px;"></i>
               <span>Anomaly Detection</span>
             </div>
-            <div class="card-value">{{ anomalies.length }}</div>
+            <div class="card-value">{{ anomalies?.length ?? 0 }}</div>
             <div class="anomaly-summary">
               <div class="severity-counts">
                 <span class="high">{{ getSeverityCount('high') }} High</span>
@@ -64,10 +64,10 @@
         <mat-card class="summary-card ai-card">
           <mat-card-content>
             <div class="card-header">
-              <mat-icon color="primary">recommend</mat-icon>
+              <i class="fas fa-lightbulb" style="margin-right:8px;"></i>
               <span>Product Recommendations</span>
             </div>
-            <div class="card-value">{{ recommendations[0]?.productName || 'N/A' }}</div>
+            <div class="card-value">{{ recommendations[0]?.productName || 'No Recommendation' }}</div>
             <div class="card-subtitle">Top Recommendation</div>
           </mat-card-content>
         </mat-card>
@@ -75,16 +75,16 @@
         <mat-card class="summary-card trend-card">
           <mat-card-content>
             <div class="card-header">
-              <mat-icon color="primary">show_chart</mat-icon>
+              <i class="fas fa-chart-line" style="margin-right:8px;"></i>
               <span>Trend Analysis</span>
             </div>
             <div class="trend-summary">
               <div class="trend-stats">
                 <div class="trend-item" *ngFor="let trend of topTrends">
-                  <span class="product-name">{{ trend?.productName || 'N/A' }}</span>
+                  <span class="product-name">{{ trend?.productName || 'Unknown' }}</span>
                   <span class="trend-indicator" [class]="trend.trend">
                     {{ trend.trend === 'up' ? '↑' : trend.trend === 'down' ? '↓' : '→' }}
-                    {{ trend.growthRate | number:'1.0-0' }}%
+                    {{ trend.growthRate ?? 0 | number:'1.0-0' }}%
                   </span>
                 </div>
               </div>
@@ -95,45 +95,45 @@
         <mat-card class="summary-card">
           <mat-card-content>
             <div class="card-header">
-              <mat-icon color="primary">inventory_2</mat-icon>
+              <i class="fas fa-boxes" style="margin-right:8px;"></i>
               <span>Inventory Status</span>
             </div>
-            <div class="card-value">{{ insights?.totalProducts }}</div>
+            <div class="card-value">{{ insights?.totalProducts ?? 0 }}</div>
             <div class="card-subtitle">Active Products</div>
-            <div class="card-value">Low Stock: {{ insights?.lowStock?.length }}</div>
+            <div class="card-value">Low Stock: {{ insights?.lowStock?.length ?? 0 }}</div>
           </mat-card-content>
         </mat-card>
         <!-- Sales Insights -->
         <mat-card class="summary-card">
           <mat-card-content>
             <div class="card-header">
-              <mat-icon color="primary">insights</mat-icon>
+              <i class="fas fa-chart-bar" style="margin-right:8px;"></i>
               <span>Sales Insights</span>
             </div>
-            <div class="card-value">{{ monthOverMonth.percentageChange > 0 ? '+' : '' }}{{ monthOverMonth.percentageChange }}%</div>
+            <div class="card-value">{{ (monthOverMonth.percentageChange > 0 ? '+' : '') + (monthOverMonth.percentageChange ?? 0) }}%</div>
             <div class="card-subtitle">vs last month</div>
-            <div class="card-value">Next Month Prediction: {{ prediction?.prediction || 0 }}</div>
+            <div class="card-value">Next Month Prediction: {{ prediction?.prediction ?? 0 }}</div>
           </mat-card-content>
         </mat-card>
         <!-- Product Expected to Buy Next Month -->
         <mat-card class="summary-card">
           <mat-card-content>
             <div class="card-header">
-              <mat-icon color="primary">star</mat-icon>
+              <i class="fas fa-star" style="margin-right:8px;"></i>
               <span>Expected Top Seller Next Month</span>
             </div>
-            <div class="card-value">{{ (productPredictions && productPredictions[0]?.product) || 'N/A' }}</div>
+            <div class="card-value">{{ (productPredictions && productPredictions[0]?.product) || 'No Data' }}</div>
           </mat-card-content>
         </mat-card>
         <!-- Products Not Sold -->
         <mat-card class="summary-card">
           <mat-card-content>
             <div class="card-header">
-              <mat-icon color="primary">block</mat-icon>
+              <i class="fas fa-ban" style="margin-right:8px;"></i>
               <span>Products Not Sold</span>
             </div>
-            <div class="card-value">{{ (insights?.notSold || []).length }}</div>
-            <div class="card-subtitle">{{ (insights?.notSold || []).join(', ') || 'No data' }}</div>
+            <div class="card-value">{{ (insights?.notSold?.length ?? 0) }}</div>
+            <div class="card-subtitle">{{ (insights?.notSold?.length ?? 0) > 0 ? (insights?.notSold?.join(', ')) : 'No data' }}</div>
           </mat-card-content>
         </mat-card>
       </div>
@@ -159,17 +159,17 @@
             <div class="recommendations-grid">
               <mat-card class="recommendation-card" *ngFor="let rec of recommendations">
                 <mat-card-header>
-                  <mat-card-title>{{ rec?.productName || 'N/A' }}</mat-card-title>
+                  <mat-card-title>{{ rec?.productName || 'Unknown' }}</mat-card-title>
                   <mat-card-subtitle>{{ rec.category }}</mat-card-subtitle>
                 </mat-card-header>
                 <mat-card-content>
                   <div class="recommendation-details">
-                    <div class="price">${{ rec.price }}</div>
-                    <div class="score">Score: {{ rec.score | number:'1.0-0' }}%</div>
-                    <div class="reason">{{ rec.reason }}</div>
+                    <div class="price">${{ rec.price ?? 0 }}</div>
+                    <div class="score">Score: {{ rec.score ?? 0 | number:'1.0-0' }}%</div>
+                    <div class="reason">{{ rec.reason || 'No reason available' }}</div>
                     <div class="similar-products">
                       <span class="label">Similar to:</span>
-                      <span class="products">{{ rec.similarProducts.join(', ') }}</span>
+                      <span class="products">{{ (rec.similarProducts?.length ?? 0) > 0 ? rec.similarProducts.join(', ') : 'None' }}</span>
                     </div>
                   </div>
                 </mat-card-content>
