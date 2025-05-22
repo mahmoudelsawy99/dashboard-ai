@@ -11,36 +11,7 @@ An AI-powered assistant for e-commerce stores built with Node.js and Express.
 ## Project Structure
 
 ```
-ai-ecommerce-assistant/
-│
-├── app.js                  # Main Express app entry point
-├── package.json
-├── /config
-│   └── db.js               # Handles reading/writing JSON database
-├── /controllers
-│   ├── insightsController.js
-│   ├── predictionController.js
-│   └── recommendationController.js
-├── /routes
-│   ├── insights.js
-│   ├── prediction.js
-│   └── recommendation.js
-├── /services
-│   ├── insightsService.js
-│   ├── predictionService.js
-│   └── recommendationService.js
-├── /models
-│   └── productModel.js     # Handles product data logic
-├── /data
-│   └── db.json             # The JSON "database"
-├── /utils
-│   ├── linearRegression.js
-│   └── cosineSimilarity.js
-├── /middleware
-│   └── errorHandler.js
-└── README.md
-```
-
+ 
 ## Installation
 
 1. Clone the repository.
